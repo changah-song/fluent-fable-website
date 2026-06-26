@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+.claude/launch.json
+
+# internal build spec — not part of the published site
+fluentfable-landing-prompt.md

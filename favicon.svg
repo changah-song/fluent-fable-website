@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="FluentFable">
+  <rect width="64" height="64" rx="14" fill="#202631"/>
+  <text x="32" y="33" fill="#faf8f5"
+        font-family="Fraunces, Georgia, 'Times New Roman', serif"
+        font-size="30" font-weight="600" letter-spacing="-1"
+        text-anchor="middle" dominant-baseline="central">FF</text>
+</svg>

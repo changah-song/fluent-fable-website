@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===================================================================
+       CONFIG — OWNER: fill these in. They're greppable tokens.
+       1. STORE_URL        → Apple App Store link. Used by every
+          "Download on the App Store" button/badge below. Search "STORE_URL".
+       2. PLAY_STORE_URL   → Google Play link. The Play badge is commented
+          out for now; search "PLAY_STORE_URL" to enable it later.
+       3. CONTACT_EMAIL    → replaces the mailto in the footer. Search "CONTACT_EMAIL".
+       4. Replace SVG placeholders in /assets with real PNGs (see each file's
+          header comment for expected dimensions / aspect ratio).
+       =================================================================== -->
+
+  <title>FluentFable — Learn Korean by reading</title>
+  <meta name="description" content="FluentFable is a reading-first Korean app. Read real books, tap any word for an instant definition, and let a quiet spaced-repetition deck catch what slips. No streaks. No owl." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FluentFable — Learn Korean by reading" />
+  <meta property="og:description" content="Reading-first Korean. Tap any word. No streaks, no confetti, no cartoon owl — just reading." />
+  <!-- OWNER: replace with a real 1200x630 PNG for best social-platform support -->
+  <meta property="og:image" content="./assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FluentFable — Learn Korean by reading" />
+  <meta name="twitter:description" content="Reading-first Korean. Tap any word. No streaks, no confetti, no cartoon owl — just reading." />
+  <meta name="twitter:image" content="./assets/og-image.svg" />
+
+  <meta name="theme-color" content="#fbf9f8" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="./index.html" aria-label="FluentFable home">
+          <span class="brand__mark" aria-hidden="true">FF</span>
+          <span class="brand__word">FluentFable</span>
+        </a>
+
+        <div class="nav__links">
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#faq">FAQ</a>
+          <!-- STORE_URL: this scrolls to the download section; swap href to the App Store link if you prefer -->
+          <a class="btn btn--primary btn--sm" href="#download">Get the app</a>
+        </div>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <!-- mobile menu -->
+    <div class="nav__menu" id="mobile-menu">
+      <div class="container" style="padding:0;">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--primary" href="#download">Get the app</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy reveal">
+            <p class="eyebrow">Read Korean, for real</p>
+            <h1 class="hero__title">Learn Korean the way you learned to read.</h1>
+            <p class="hero__lead">
+              Grow your vocabulary by actually reading — real Korean stories, with tap-to-define
+              support right where you need it. Flashcards wait quietly in the background, for the
+              words that try to slip away.
+            </p>
+            <div class="hero__ctas">
+              <!-- STORE_URL: Apple App Store link -->
+              <a class="store-badge" href="STORE_URL" aria-label="Download FluentFable on the App Store">
+                <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M17.6 13.8c0-3 2.4-4.4 2.5-4.5-1.4-2-3.5-2.3-4.3-2.3-1.8-.2-3.5 1.1-4.4 1.1-.9 0-2.3-1-3.8-1-2 0-3.8 1.1-4.8 2.9-2 3.6-.5 8.9 1.5 11.8 1 1.4 2.1 3 3.6 2.9 1.4-.1 2-.9 3.7-.9s2.2.9 3.8.9c1.6 0 2.6-1.4 3.5-2.8 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-3.1-1.2-3.2-4.7zM14.8 5c.8-1 1.3-2.3 1.2-3.7-1.1.1-2.5.8-3.3 1.7-.7.8-1.4 2.2-1.2 3.5 1.3.1 2.5-.6 3.3-1.5z"/></svg>
+                <span>
+                  <span class="store-badge__sub">Download on the</span>
+                  <span class="store-badge__main">App Store</span>
+                </span>
+              </a>
+              <a class="btn btn--ghost" href="#screenshots">See it in action</a>
+            </div>
+            <p class="hero__note">Built on comprehensible-input research. Korea's classics included.</p>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="phone">
+              <!-- OWNER: replace assets/hero-screenshot.svg with a real phone screenshot (~9:19.5, e.g. 1170x2532). -->
+              <img src="./assets/hero-screenshot.svg" width="300" height="650"
+                   alt="The FluentFable reading screen showing a Korean short story with one word tapped for an inline definition." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST STRIP ===================== -->
+    <section class="trust" aria-label="What FluentFable is not">
+      <div class="container">
+        <p>No streaks. No confetti. No cartoon owl. Just reading.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Features</p>
+          <h2 class="section__title">A reading lamp, not a casino.</h2>
+          <p class="section__lead">Everything here serves one idea: the more you read, the more Korean you know. The tools stay out of the way.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c-1.8-1.2-4-1.5-6-1v13c2-.5 4.2-.2 6 1 1.8-1.2 4-1.5 6-1V4c-2-.5-4.2-.2-6 1z"/><path d="M12 5v14"/></svg>
+            </span>
+            <h3>Read first, study second</h3>
+            <p>Extensive reading is the engine. Flashcards are the safety net — there when you need them, silent when you don't.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 9 2-6 6-2-11-4z"/><path d="M5 5l2 2"/><path d="M9 4v3"/><path d="M4 9h3"/></svg>
+            </span>
+            <h3>Tap any word</h3>
+            <p>Instant definitions and romanization — plus, for Korean, the hanja and root characters behind a word. Then it gets out of your way.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z"/><path d="M20 6v14a2 2 0 0 0-2-2h-1"/></svg>
+            </span>
+            <h3>Bring your own books</h3>
+            <p>Public-domain Korean classics are built in — 감자, 날개, 운수 좋은 날. Import your own EPUBs whenever you like.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 3 6.7"/><path d="M3 19v-4h4"/><path d="M12 8v4l3 2"/></svg>
+            </span>
+            <h3>Remembers what you've met</h3>
+            <p>Words you meet while reading flow into a spaced-repetition deck (FSRS), so the ones worth keeping don't slip away.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section section--muted" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section__title">Three steps. Mostly just the first one.</h2>
+        </div>
+
+        <ol class="steps" style="list-style:none; padding:0; margin:0;">
+          <li class="step reveal">
+            <div class="step__num">1</div>
+            <h3>Open a book at your level</h3>
+            <p>Start with a built-in classic or import your own. Pick something a little easy — that's the point.</p>
+            <div class="step__bar"><i style="width:90%"></i></div>
+          </li>
+          <li class="step reveal">
+            <div class="step__num">2</div>
+            <h3>Read; tap for instant help</h3>
+            <p>Hit an unknown word? Tap it. Definition, romanization, root characters — then back to the story.</p>
+            <div class="step__bar"><i style="width:55%"></i></div>
+          </li>
+          <li class="step reveal">
+            <div class="step__num">3</div>
+            <h3>Review only when you need to</h3>
+            <p>The words you met wait in a quiet deck. Review surfaces them right before you'd forget — no sooner.</p>
+            <div class="step__bar"><i style="width:25%"></i></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <section class="section" id="screenshots">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Screenshots</p>
+          <h2 class="section__title">Quiet by design.</h2>
+          <p class="section__lead">Ink on warm paper. One slate accent. The reading does the talking.</p>
+        </div>
+
+        <!-- OWNER: replace each assets/screenshot-N.svg with a real phone PNG (~9:19.5). -->
+        <div class="shots-grid">
+          <figure class="shot" data-lightbox tabindex="0" role="button" aria-label="Open reading screen screenshot">
+            <img src="./assets/screenshot-1.svg" width="360" height="780" loading="lazy"
+                 alt="Reading screen: a tapped Korean word with its definition, romanization and hanja in a bottom sheet." />
+            <figcaption>Tap to define</figcaption>
+          </figure>
+          <figure class="shot" data-lightbox tabindex="0" role="button" aria-label="Open library screen screenshot">
+            <img src="./assets/screenshot-2.svg" width="360" height="780" loading="lazy"
+                 alt="Library screen: a shelf of Korean classics as slate book covers, plus an import slot for your own EPUBs." />
+            <figcaption>Your shelf</figcaption>
+          </figure>
+          <figure class="shot" data-lightbox tabindex="0" role="button" aria-label="Open review deck screenshot">
+            <img src="./assets/screenshot-3.svg" width="360" height="780" loading="lazy"
+                 alt="Review screen: a spaced-repetition flashcard for a word met while reading, with Again / Good / Easy grades." />
+            <figcaption>Gentle review</figcaption>
+          </figure>
+          <figure class="shot" data-lightbox tabindex="0" role="button" aria-label="Open word breakdown screenshot">
+            <img src="./assets/screenshot-4.svg" width="360" height="780" loading="lazy"
+                 alt="Word detail: the hanja root characters behind a Korean word and other words that share those roots." />
+            <figcaption>Root characters</figcaption>
+          </figure>
+        </div>
+
+        <!-- Video slot -->
+        <div class="video-frame reveal">
+          <!-- OWNER: supply assets/demo.mp4 + assets/demo-poster.png, then delete the <img>
+               below and uncomment the <video> tag.
+          <video controls preload="none" poster="./assets/demo-poster.png" width="1600" height="900">
+            <source src="./assets/demo.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
+          -->
+          <img src="./assets/demo-poster.svg" width="1600" height="900" loading="lazy"
+               alt="Placeholder poster for the FluentFable demo video — coming soon." />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOWNLOAD CTA ===================== -->
+    <section class="section section--muted download" id="download">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Get the app</p>
+          <h2 class="download__title">Start reading today.</h2>
+          <div class="download__badges">
+            <!-- STORE_URL: Apple App Store link -->
+            <a class="store-badge" href="STORE_URL" aria-label="Download FluentFable on the App Store">
+              <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M17.6 13.8c0-3 2.4-4.4 2.5-4.5-1.4-2-3.5-2.3-4.3-2.3-1.8-.2-3.5 1.1-4.4 1.1-.9 0-2.3-1-3.8-1-2 0-3.8 1.1-4.8 2.9-2 3.6-.5 8.9 1.5 11.8 1 1.4 2.1 3 3.6 2.9 1.4-.1 2-.9 3.7-.9s2.2.9 3.8.9c1.6 0 2.6-1.4 3.5-2.8 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-3.1-1.2-3.2-4.7zM14.8 5c.8-1 1.3-2.3 1.2-3.7-1.1.1-2.5.8-3.3 1.7-.7.8-1.4 2.2-1.2 3.5 1.3.1 2.5-.6 3.3-1.5z"/></svg>
+              <span>
+                <span class="store-badge__sub">Download on the</span>
+                <span class="store-badge__main">App Store</span>
+              </span>
+            </a>
+
+            <!-- PLAY_STORE_URL: Google Play coming later. Uncomment to enable.
+            <a class="store-badge" href="PLAY_STORE_URL" aria-label="Get FluentFable on Google Play">
+              <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M3 2l13 11L3 24V2z"/></svg>
+              <span>
+                <span class="store-badge__sub">Get it on</span>
+                <span class="store-badge__main">Google Play</span>
+              </span>
+            </a>
+            -->
+          </div>
+          <p class="download__note">iPhone &amp; iPad. Android planned.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section__title">Questions, answered plainly.</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Is FluentFable free?</summary>
+            <p>[PLACEHOLDER — replace] Describe your pricing here (e.g. free to start, with an optional subscription). Avoid stating a specific price until it's final.</p>
+          </details>
+          <details>
+            <summary>What level do I need to start?</summary>
+            <p>[PLACEHOLDER — replace] A short, encouraging answer. The honest version: if you know hangul and a handful of words, pick an easy book and begin. The app surfaces the words you don't yet know.</p>
+          </details>
+          <details>
+            <summary>Does it work offline?</summary>
+            <p>[PLACEHOLDER — replace] State which parts work offline (downloaded books and your review deck) versus what needs a connection.</p>
+          </details>
+          <details>
+            <summary>Will there be other languages?</summary>
+            <p>The app is built to extend beyond Korean — English and Chinese are planned. No promises on timing yet.</p>
+          </details>
+          <details>
+            <summary>Can I import my own books?</summary>
+            <p>Yes. FluentFable reads EPUB files, so you can bring your own Korean books alongside the built-in public-domain classics.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="./index.html" aria-label="FluentFable home">
+            <span class="brand__mark" aria-hidden="true">FF</span>
+            <span class="brand__word">FluentFable</span>
+          </a>
+          <p class="footer__tagline">Learn Korean by reading the books you actually want to read.</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <!-- CONTACT_EMAIL: replace the address below -->
+          <a href="mailto:CONTACT_EMAIL">Contact</a>
+          <!-- SOCIAL_URL: add social links here if/when you have them
+          <a href="SOCIAL_URL">Instagram</a>
+          -->
+        </nav>
+      </div>
+      <p class="footer__copy">© 2026 FluentFable. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+    <button class="lightbox__close" type="button" aria-label="Close preview">&times;</button>
+    <img src="" alt="" />
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
