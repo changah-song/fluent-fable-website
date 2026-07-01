@@ -1,4 +1,4 @@
-/* FluentFable — minimal vanilla JS: mobile nav, scroll state, lightbox, reveal.
+/* Noeul — minimal vanilla JS: mobile nav, scroll state, lightbox, reveal.
    No dependencies. Everything degrades gracefully if JS is disabled. */
 (function () {
   'use strict';
